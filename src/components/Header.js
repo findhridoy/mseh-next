@@ -1,70 +1,79 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import gsap from "gsap";
-import React, { useEffect, useMemo, useState } from "react";
-import { menuAnimation } from "../utils/Animation";
-// import { menuAnimation } from "";
+import React from "react";
+import { AiFillHome } from "react-icons/ai";
+import { BiMoon } from "react-icons/bi";
+import { BsGearFill, BsSunFill } from "react-icons/bs";
+import { FaUser, FaUserFriends } from "react-icons/fa";
+import { MdPermContactCalendar } from "react-icons/md";
 
 const Header = () => {
-  const [play, setPlay] = useState(false);
-  const tl = useMemo(() => gsap.timeline({ paused: true }), []);
-  useEffect(() => {
-    menuAnimation(tl);
-  }, [tl]);
-  useEffect(() => {
-    if (play) {
-      tl.play();
-    } else {
-      tl.reverse();
-    }
-  }, [tl, play]);
-
-  const handleMenu = () => {
-    setPlay(!play);
-  };
   return (
     <header className="header">
-      <div className="container">
-        <nav className="header__nav">
-          <a href="" className="nav__logo">
-            MSEH Next()
-          </a>
-          <div className="nav__menu">
-              <ul className="nav__list">
-                <li className="nav__item">
-                  <a href="#" className="nav__link">
-                    Home
-                  </a>
-                </li>
-                <li className="nav__item">
-                  <a href="#" className="nav__link">
-                    About
-                  </a>
-                </li>
-                <li className="nav__item">
-                  <a href="#" className="nav__link">
-                    Service
-                  </a>
-                </li>
-                <li className="nav__item">
-                  <a href="#" className="nav__link">
-                    Team
-                  </a>
-                </li>
-                <li className="nav__item">
-                  <a href="#" className="nav__link">
-                    Client
-                  </a>
-                </li>
-                <li className="nav__item">
-                  <a href="#" className="nav__link">
-                    Contact
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </div>
+      <nav className="nav container">
+        <a href="" className="nav__logo">
+          MSEH Next
+        </a>
+        <div className="nav__menu">
+          <ul className="nav__list">
+            <li className="nav__item ">
+              <a href="#" className="nav__link active__link">
+                <span className="nav__icon">
+                  <AiFillHome />
+                </span>
+                <span className="nav__text">Home</span>
+              </a>
+            </li>
+            <li className="nav__item">
+              <a href="#about" className="nav__link">
+                <span className="nav__icon">
+                  <FaUser />
+                </span>
+                <span className="nav__text">About</span>
+              </a>
+            </li>
+            <li className="nav__item">
+              <a href="#service" className="nav__link">
+                <span className="nav__icon">
+                  <BsGearFill />
+                </span>
+                <span className="nav__text">Service</span>
+              </a>
+            </li>
+            <li className="nav__item">
+              <a href="#" className="nav__link">
+                <span className="nav__icon">
+                  <FaUserFriends />
+                </span>
+                <span className="nav__text">Team</span>
+              </a>
+            </li>
+            {/* <li className="nav__item">
+              <a href="#" className="nav__link">
+                <span className="nav__icon">
+                  <FaUserPlus />
+                </span>
+                <span className="nav__text">Client</span>
+              </a>
+            </li> */}
+            <li className="nav__item">
+              <a href="#" className="nav__link">
+                <span className="nav__icon">
+                  <MdPermContactCalendar />
+                </span>
+                <span className="nav__text">Contact</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div className="nav__mood">
+          <span className="nav__mood--light">
+            <BsSunFill />
+          </span>
+          <span className="nav__mood--dark">
+            <BiMoon />
+          </span>
+        </div>
+      </nav>
     </header>
   );
 };

@@ -1,0 +1,80 @@
+.banner__content {
+  display: grid;
+  height: calc(100vh - var(--header-height));
+  width: 100%;
+}
+.banner__data {
+  align-self: center;
+  text-align: center;
+}
+.banner__title {
+  font-size: var(--h1-font);
+  text-transform: uppercase;
+  color: var(--dark-color);
+}
+.banner__text {
+  font-size: var(--small-font);
+  margin-top: var(--x-0-75);
+}
+.banner__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: var(--x-1-25);
+}
+.banner__image {
+  text-align: center;
+}
+.banner__image img {
+  width: 200px;
+  animation: up-down 2000ms ease-in-out infinite forwards;
+}
+
+@keyframes up-down {
+  0% {
+    transform: translateY(-5px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(-5px);
+  }
+}
+
+/* ====================== MEDIA QUERIES =====================
+/* ------------- For Small Device ------------- */
+@media screen and (max-width: 340px) {
+}
+
+/* ------------- For Medium Device ------------- */
+@media screen and (min-width: 576px) {
+}
+
+/* ------------- For Tablet, Laptop ------------- */
+@media screen and (min-width: 768px) {
+  .banner__content {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+  .banner__data {
+    align-self: initial;
+    text-align: initial;
+  }
+  .banner__image img {
+    width: 280px;
+  }
+}
+
+/* ------------- For Large Device ------------- */
+@media screen and (min-width: 1024px) {
+  .banner__image img {
+    width: 350px;
+  }
+}
+/* ------------- For Extra Large Device ------------- */
+@media screen and (min-width: 1200px) {
+  .banner__image img {
+    width: 400px;
+  }
+}

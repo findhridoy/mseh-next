@@ -1,0 +1,102 @@
+.service {
+  /* height: calc(100vh - var(--header-height)); */
+  /* display: flex; */
+  /* align-items: center; */
+}
+.service__content {
+  text-align: center;
+}
+.service__subtitle {
+  font-size: var(--h2-font);
+  line-height: 1.2;
+  font-weight: var(--reguler);
+  color: var(--dark-color);
+  margin-top: var(--x-0-5);
+}
+
+.service__data {
+  display: grid;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: var(--x-1-5);
+}
+
+/* Service Card */
+.serviceCard {
+  padding: var(--x-1-5);
+  max-width: 330px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* margin: 0 auto; */
+  cursor: pointer;
+  transition: box-shadow 400ms ease-in-out;
+}
+.serviceCard__image {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  border: var(--border);
+  border-color: var(--gray-alt-color);
+  transition: var(--transition);
+}
+.serviceCard__image img {
+  width: 90px;
+  filter: grayscale(100%);
+  transition: filter 300ms ease-in-out;
+}
+.serviceCard__title {
+  margin-top: var(--x-1);
+  font-size: var(--h3-font);
+  font-weight: var(--medium);
+  color: var(--dark-color);
+}
+.serviceCard__decription {
+  margin-top: var(--x-0-5);
+  font-size: var(--small-font);
+}
+
+/* card hover */
+.serviceCard:hover {
+  box-shadow: var(--shadow-card);
+}
+.serviceCard:hover .serviceCard__image {
+  border-color: var(--gray-color);
+}
+.serviceCard:hover .serviceCard__image img {
+  filter: grayscale(0);
+}
+/* ====================== MEDIA QUERIES =====================
+/* ------------- For Small Device ------------- */
+@media screen and (max-width: 340px) {
+}
+
+/* ------------- For Medium Device ------------- */
+@media screen and (min-width: 576px) {
+  .service__data {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  .serviceCard {
+    /* max-width: initial; */
+  }
+}
+
+/* ------------- For Tablet, Laptop ------------- */
+@media screen and (min-width: 768px) {
+  .service__data {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ------------- For Large Device ------------- */
+@media screen and (min-width: 1024px) {
+}
+/* ------------- For Extra Large Device ------------- */
+@media screen and (min-width: 1200px) {
+}
