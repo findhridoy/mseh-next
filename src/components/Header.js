@@ -40,7 +40,7 @@ const Header = () => {
               </a>
             </li>
             <li className="nav__item">
-              <a href="#" className="nav__link">
+              <a href="#team" className="nav__link">
                 <span className="nav__icon">
                   <FaUserFriends />
                 </span>
@@ -56,7 +56,7 @@ const Header = () => {
               </a>
             </li> */}
             <li className="nav__item">
-              <a href="#" className="nav__link">
+              <a href="#contact" className="nav__link">
                 <span className="nav__icon">
                   <MdPermContactCalendar />
                 </span>

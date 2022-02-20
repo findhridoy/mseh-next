@@ -7,10 +7,6 @@
   text-align: center;
 }
 .service__subtitle {
-  font-size: var(--h2-font);
-  line-height: 1.2;
-  font-weight: var(--reguler);
-  color: var(--dark-color);
   margin-top: var(--x-0-5);
 }
 

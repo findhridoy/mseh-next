@@ -171,6 +171,12 @@ img {
   font-weight: var(--bold);
   color: var(--primary-color);
 }
+.section__subtitle {
+  font-size: var(--h2-font);
+  line-height: 1.2;
+  font-weight: var(--reguler);
+  color: var(--dark-color);
+}
 .container {
   max-width: 1166px;
   margin-left: var(--x-1);
@@ -244,6 +250,7 @@ img {
 @import "./styles/About.css";
 @import "./styles/Service.css";
 @import "./styles/Counter.css";
+@import "./styles/Team.css";
 
 /* Scrollbar css */
 ::-webkit-scrollbar {

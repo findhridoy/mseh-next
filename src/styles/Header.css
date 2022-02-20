@@ -87,7 +87,7 @@
   font-size: var(--h2-font);
 }
 .nav__text {
-  font-size: var(--small-font);
+  font-size: var(--smaller-font);
   margin-top: -0.2rem;
 }
 
@@ -102,11 +102,17 @@
 
 /* ====================== MEDIA QUERIES =====================
 /* ------------- For Small Device ------------- */
-@media screen and (max-width: 340px) {
+@media screen and (max-width: 350px) {
+  .nav__text {
+    font-size: var(--smallest-font);
+  }
 }
 
 /* ------------- For Medium Device ------------- */
 @media screen and (min-width: 576px) {
+  .nav__text {
+    font-size: var(--small-font);
+  }
 }
 
 /* ------------- For Tablet, Laptop ------------- */
@@ -121,8 +127,7 @@
     column-gap: 2rem;
   }
   .nav__text {
-    font-size: var(--small-font);
-    margin: 0em;
+    margin: 0;
   }
 }
 
